@@ -1,0 +1,252 @@
+.site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top {
+    position: absolute;
+    z-index: 99;
+}
+
+.unit-5.overlay {
+    position: absolute;
+    width: 100%;
+}
+.col-md-8, 
+ .body-col
+{
+    border-right: 1px solid #28a745;
+    padding: 15px;
+}    
+.review-col{
+    padding: 15px;
+}
+
+
+/* Layout */
+section.company-info{
+    padding-top: 204px;
+}
+.container.company-container{
+    
+    width: 980px;
+}
+.row.company-row{
+    
+}
+
+img.background-img{
+  
+    width: 100%; 
+    height: 350px;
+}
+.intro-container{
+    
+    width: 100%;
+    padding: 25px !important;
+    border-bottom: 1px solid #28a745;
+    margin-bottom: 25px;
+ 
+}
+.row.card-row{
+    /* padding: 20px; */
+}
+.col-md-4.avatar-col{
+    /* padding: 20px; */
+    
+}
+/* intro-container */
+/* .col-md-3.avatar-col */
+
+.avatar{
+    width: 168px;   
+    height: 160px;
+    border:1px solid black;
+}
+
+/* .col-md-7.info */
+.icon-img{
+    border: 1px solid lightgrey;
+}
+.info-item-detail{
+    display: inline-flex;
+}
+span{
+    padding-left: 10px;
+}
+.info-item-detail>.info-item{
+    padding-right: 20px;
+}
+
+
+
+/* row body-row */
+/* col-md-8 body-col */
+.list-skill{
+    display: flex; 
+}
+.skill-item{
+    border: 1px solid #28a745;
+
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.body-container{
+    
+}
+.review-container{
+     
+    
+}
+/* Available job */
+.card{
+    padding: 20px;    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.card:hover{
+    border: 2px solid #28a745;
+}
+
+.card-title{
+    font-size:25px;
+}
+
+span#salary{
+    color: #28a745;
+
+}
+.related{
+    display: flex;
+}
+.related-item{
+
+    border: 1px solid #28a745;
+    padding: 3px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* col-md-2 */
+.noti{
+    border: 1px solid #28a745;
+    background: #28a745;
+    color: white; 
+    text-align: center;
+
+}
+.post-time{
+    font-size: 12px;
+    color: #28a745;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* LOCATION */
+.container.location-container{
+    padding-left: 0px !important; 
+    padding-right: 0px !important; 
+}
+/* Set font */
+.company-name, span, .btn, h2, p, div,
+.overview, .noti, .review-title, .title{
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+.separator{
+    border-top: 1px solid #28a745;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+h2.overview{
+    color: #28a745;
+}
+
+
+/* REVIEW */
+.checked{
+    color: #28a745;
+}
+
+/* Gallery*/
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #28a745;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .row.row.thumnail{
+    display: flex;
+    justify-content: center;
+    background: lightgray;
+  }
+  .row.thumnail:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }

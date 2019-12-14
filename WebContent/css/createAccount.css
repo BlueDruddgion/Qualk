@@ -1,0 +1,142 @@
+/* INTRO */
+
+.container.register-container{
+    max-width: 1400px;
+    height: 100%;
+    padding: 20px;
+}
+div.register-intro{
+    height: 200px;
+    width: 1400px;
+    background: url('/Users/teomoney1999/Downloads/jobfinder/images/hero_1.jpg');
+   
+}
+.intro-title{
+    color: white;
+    width: 100%;
+    font-weight: 400 !important;
+}
+.row.register-row{
+    height: 100%;
+    padding: 60px;
+    text-align: center;
+}
+/*REGISTER BODY*/
+section.register-body{
+    padding-bottom: 95px;
+}
+.container.register-contain{
+    
+}
+.row.register-body-row{
+    justify-content: center;
+    padding: 40px;
+}
+.script-container{
+
+    text-align: center;
+}
+.script{
+    margin-bottom: 0px !important;
+    color: black;
+    font-weight: 300;
+
+}
+.title{
+    margin-bottom: 0px !important; 
+    position: relative;
+    left: 246px;
+    font-weight: 400;
+
+}
+.fill-area{
+    height: 56px;
+    border-radius: 7px;
+}
+.fill-info{
+    margin-top: 40px;
+    padding-left: 15px;
+}
+.about-info, .place-info, .birthday, .user-info{
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.about-info{
+    
+}
+.fill-area{
+    padding: 15px;
+}
+.fill-area.name{
+    margin-right: 20px; 
+    width: 235px;   
+}
+.fill-area.place{
+   
+    width: 150px;
+    margin-right: 20px;
+}
+.birthday{
+    height: 56px;
+}
+.birthday-day{
+    width: 90px;
+}
+.birthday-month{
+    width: 250px;
+    text-align: center;
+}
+.birthday-year{
+    width: 110px;
+}
+#day,#month,#year{
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.separator{
+    border-top: 1px solid #28a745;
+    width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.fill-area.user{
+    width: 492px;
+    margin-bottom: 15px;
+    position: relative;
+    left: -9px;
+
+}
+.user-info{
+    display: inline-grid;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.user-title{
+    margin-bottom:0px !important;
+    position: relative;
+    left: -9px;
+}
+
+#confirm-btn{
+    position: relative;
+    /* display: flex; */
+    /* justify-content: center; */
+    left: 445px;
+    background: #28a745;
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    color: white;
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+/* SET FONT */
+.intro-title, script, .fill-info, .title{
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+.intro-title{
+    color: white;
+}

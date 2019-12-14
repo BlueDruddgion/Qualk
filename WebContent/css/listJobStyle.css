@@ -1,0 +1,178 @@
+
+/* Layout */
+.container.list-job-container{
+    width: 980px;
+}
+
+.row.search-engine{
+    padding-left:15px;
+    padding-right: 15px;
+    margin-top: 30px;
+
+}
+form{
+    width: 100%;
+    display: flex;
+    height: 60px;
+}
+.location>select{
+    width: 183px;
+    height: 60px;
+    margin-right: 15px;
+    outline: none;
+}
+.search-input{
+    width: 602px;
+    /* height: 60px */
+    margin-right: 15px;
+    padding: 20px; 
+    outline: none;
+}
+button.search{
+    width: 135px;
+    outline: none; 
+    background: #28a745;
+    color: white;
+    /* text-transform: uppercase; */
+    font-weight: 400;
+
+}
+button.search:hover{
+    opacity: 0.6;
+}
+
+.separator{
+    width: 100%;
+    border-top: 1px solid #28a745;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.separator#for-search{
+    margin-top: 50px;
+}
+
+
+
+/* Available job */
+.card{
+    padding: 20px;    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.card:hover{
+    border: 5px solid #28a745;
+}
+
+.card-title{
+    font-size:25px;
+}
+.card-text{
+    margin-bottom: 10px !important;
+}
+.card-text#script{
+    height: 54px;
+    overflow: hidden;
+}
+.card-text#script::after{
+    content: "..."
+}
+
+span#salary{
+    color: #28a745;
+
+}
+.related{
+    display: flex;
+}
+.related-item{
+
+    border: 1px solid #28a745;
+    padding: 3px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.noti, .loca, .post-time{
+    text-align: center;
+}
+.noti{
+    border: 1px solid #28a745; 
+    border-radius: 5px;
+    background: #28a745; 
+    color: white; 
+}
+.post-time{
+    /* top: 85px; */
+    bottom: -80px;
+    position: relative;
+}
+
+
+
+/* COMPANY SPOTLIGHT */
+.company-name{
+    margin-top: 25px;
+}
+.company-name:hover{
+    color: #28a745;
+}
+.company-intro{
+    height: 120px;
+    overflow: hidden;
+    font-size: 12px;
+    color: black;
+}
+.available-jobs{
+    border:1px solid #28a745;
+    padding: 10px;
+}
+.job{
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    height: 50px;
+    font-weight: 300;
+    border-bottom:1px solid lightgrey;
+}
+.job:hover{
+    border: 3px solid #28a745;
+}
+#last-job{
+    border: none;
+}
+.clicked{
+    margin-top: 30px;
+    text-align: center;
+}
+.clicked:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+#last-job:hover{
+    border: 3px solid #28a745;
+}
+.job-title{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Set font */
+div, p, h1, h2, h3, button, option{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.fa.fa-usd{
+    color: #28a745;
+    margin-right: 5px;
+}
+.title{
+    font-weight: 300;
+}
+.title#spotlight{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 17px;
+}

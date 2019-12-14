@@ -1,0 +1,152 @@
+/* LAYOUT */
+
+/* Header */
+section.cv-header{
+    background: url("../images/hero_1.jpg");
+    height: 200px;
+    color: white;
+    
+   
+}
+.container.cv-header-container{
+    padding-top: 35px;
+    width: 1000px;
+    position: relative;
+    
+}
+.row.cv-header-row{
+   width: inherit;
+   padding: 15px;
+}
+.cv-header-info{
+    width: 883px;
+}
+.sign-out{
+    padding-top: 45px;
+}
+.cv-sign-out{
+    padding-top: 40px;
+}
+
+/* Body */
+section.cv{
+    padding: 40px;
+    position: relative;
+    top: 200px;
+    margin-bottom: 230px;
+}
+.container.section-container{
+    width: 1000px;
+    position: relative;
+   
+}
+
+
+.separator{
+    border-top: 1px solid #28a745;
+    margin-bottom: 40px;
+}
+h2{
+    margin-bottom: 0px !important;
+}
+
+.site-footer{
+    position: relative; 
+}
+
+/* FONT */
+.header-title, .signout-btn, 
+.header-info, .title-name, 
+.info-key, .info-value, 
+.upload-btn, .save, .change-btn,
+.text-area, .warning
+{
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+.header-title{
+    color: white; 
+    font-weight: 400;
+    font-size: 3rem;
+}
+.header-info{
+    color: white; 
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+.signout-btn{
+    color: white;
+    font-weight: 400;
+    border-color: transparent;
+    width: 87px;
+    height: 34px;
+    background: linear-gradient(rgba(0,0,0,.15),#e3e3e3);
+    outline: none;
+}
+.signout-btn:hover{
+    border-color: transparent; 
+    background: rgba(0,0,0,.15);
+    cursor: pointer;
+    outline: none;
+}
+
+.title-name{
+    font-weight: 400; 
+    font-size: 32px;
+    color: #666;
+}
+.info-key{
+    font-weight: 400;
+    font-size: 14px;
+}
+.info-value{
+    font-weight: 300;
+    font-size: 18px;
+}
+.change-btn{
+    font-weight: 500; 
+    background: linear-gradient(#fff,#e3e3e3);
+    color: #28a745;
+    border-radius: 7px;
+    height: 24px;
+    width: 53px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 1;
+    outline: none;
+}
+.change-btn:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+    outline: none;
+}
+.upload-btn{
+    font-weight: 500; 
+    background-color: #e3e3e3;
+    color: #28a745;
+    border-radius: 7px;
+    height: 50px;
+    width: 200px;
+    font-size: 12px;
+    outline: none;
+    margin-top: 15px;
+}
+.upload-btn:hover{
+    opacity: 0.8;
+    font-weight: bold;
+}
+.text-area{
+    width: 100%;
+    padding: 20px;
+    overflow: scroll;
+    height: 100px;
+    outline: none;
+    margin-top: 15px;
+    margin-bottom: 0px !important;
+}
+.warning{
+    color: #777;
+  
+}
