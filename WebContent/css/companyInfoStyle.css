@@ -20,7 +20,7 @@
 
 /* Layout */
 section.company-info{
-    padding-top: 204px;
+    padding-top: 100px;
 }
 .container.company-container{
     
@@ -66,13 +66,12 @@ img.background-img{
 .info-item-detail{
     display: inline-flex;
 }
-span{
-    padding-left: 10px;
-}
 .info-item-detail>.info-item{
     padding-right: 20px;
 }
-
+.info-item span, .site-menu li span {
+	padding-left: 10px;
+}
 
 
 /* row body-row */
@@ -82,7 +81,7 @@ span{
 }
 .skill-item{
     border: 1px solid #28a745;
-
+	padding: 5px;
     margin-right: 20px;
     border-radius: 5px;
 }

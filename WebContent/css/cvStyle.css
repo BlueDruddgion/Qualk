@@ -22,7 +22,7 @@ section.cv-header{
     width: 883px;
 }
 .sign-out{
-    padding-top: 45px;
+    /* padding-top: 45px; */
 }
 .cv-sign-out{
     padding-top: 40px;
@@ -32,7 +32,7 @@ section.cv-header{
 section.cv{
     padding: 40px;
     position: relative;
-    top: 200px;
+    /* top: 200px; */
     margin-bottom: 230px;
 }
 .container.section-container{
@@ -77,13 +77,14 @@ h2{
 }
 
 .signout-btn{
-    color: white;
+    color: black;
     font-weight: 400;
     border-color: transparent;
-    width: 87px;
-    height: 34px;
+    width: 85px;
+    height: 80px;
     background: linear-gradient(rgba(0,0,0,.15),#e3e3e3);
     outline: none;
+    font-size: 20px;
 }
 .signout-btn:hover{
     border-color: transparent; 

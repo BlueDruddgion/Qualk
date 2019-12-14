@@ -29,7 +29,6 @@ public class LoginServlet extends HttpServlet {
 		// Forward to /WEB-INF/views/loginView.jsp
 		// User cannot access directly into JSP pages placed in /WEB-INF/
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/login.jsp");
-		System.out.println(dispatcher.toString());
 		dispatcher.forward(req, resp);
 	}
 	
@@ -72,7 +71,7 @@ public class LoginServlet extends HttpServlet {
 			req.setAttribute("user", user);
 			
 			// Forward to login page
-			RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/login.jsp");
+			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/login.jsp");
 			dispatcher.forward(req, resp);
 			
 		// If no error, store user information in session

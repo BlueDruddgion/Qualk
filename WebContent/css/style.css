@@ -943,7 +943,7 @@ a {
   .site-block-27 ul li i {
     position: relative;
     top: 2px; }
-  .site-block-27 ul li a, .site-block-27 ul li span {
+  .site-block-27 ul li a {
     text-align: center;
     display: inline-block;
     width: 40px;
@@ -951,7 +951,7 @@ a {
     line-height: 40px;
     border-radius: 50%;
     border: 1px solid #ccc; }
-  .site-block-27 ul li.active a, .site-block-27 ul li.active span {
+.site-block-27 ul li.active a {
     background: #28a745;
     color: #fff;
     border: 1px solid transparent; }

@@ -131,10 +131,10 @@ public class DBUtils {
 		ps.executeUpdate();
 	}
 	
-	public static void UC_XoaTrungTam(Connection conn, String name) throws SQLException {
-		String query = "Delete from CenterInfo where name=?";
+	public static void UC_XoaTrungTam(Connection conn, String id) throws SQLException {
+		String query = "Delete from CenterInfo where id=?";
 		PreparedStatement ps = conn.prepareStatement(query);
-		ps.setString(1, name);
+		ps.setString(1, id);
 		ps.executeUpdate();
 	}
 	
@@ -240,6 +240,19 @@ public class DBUtils {
 		String query = "Select * from rescruiment_Form where title = ?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, title);
+		ResultSet rs = ps.executeQuery();
+		List<Form> formData = new ArrayList<>();
+		while (rs.next()) {
+			Form f = new Form(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getDate(5), 
+					rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getDate(10));
+			formData.add(f);
+		}
+		return formData;
+	}
+	
+	public static List<Form> UC_ListBTD(Connection conn) throws SQLException{
+		String query = "Select * from rescruiment_Form";
+		PreparedStatement ps = conn.prepareStatement(query);
 		ResultSet rs = ps.executeQuery();
 		List<Form> formData = new ArrayList<>();
 		while (rs.next()) {

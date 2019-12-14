@@ -51,19 +51,19 @@
           <div class="py-1">
             <div class="row align-items-center">
               <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.html">Job<strong class="font-weight-bold">Finder</strong> </a></h2>
+                <h2 class="mb-0 site-logo"><a href="${ pageContext.request.contextPath }/home">Job<strong class="font-weight-bold">Finder</strong> </a></h2>
               </div>
               <div class="col-10">
                 <nav class="site-navigation text-right" role="navigation">
                   <div class="container">
-                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="javascript:void(0)" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                      <li><a href="categories.html">For Candidates</a></li>
+                      <li><a href="${ pageContext.request.contextPath }/categories">For Candidates</a></li>
                       <li class="has-children">
-                        <a href="category.html">For Employees</a>
+                        <a href="${ pageContext.request.contextPath }/categories">For Employees</a>
                         <ul class="dropdown arrow-top">
-                          <li><a href="category.html">Category</a></li>
+                          <li><a href="${ pageContext.request.contextPath }/categories">Category</a></li>
                           <li><a href="#">Browse Candidates</a></li>
                           <li><a href="new-post.html">Post a Job</a></li>
                           <li><a href="#">Employeer Profile</a></li>
@@ -98,7 +98,7 @@
         <div class="row login-form-row">
           <h2 class='login-title'>Login to <a href='#'>QUALK</a></h2>
           
-          <form action='${pageContent.request.contentPath}/login' method='POST'>
+          <form action='${ pageContext.request.contextPath }/login' method='POST'>
               <!-- <div class='input-form' id='user-first'>
                   <input class='input'  type='text' placeholder='UserID' name='username'>
                   <button type='submit' id='firstSubmit' class='submit-btn'><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>

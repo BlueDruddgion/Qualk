@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,17 +21,10 @@
     <link rel="stylesheet" href="css/animate.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-    
-    
-    
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">  
     <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/listFormStyle.css">
-    <link rel="stylesheet" href="css/listJobStyle.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/listJobStyle.css">
     
   </head>
   <body>

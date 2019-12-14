@@ -14,7 +14,13 @@ public class MappingTable {
 		List<Location> locationList = DBUtils.UC_Location(conn);
 		for (Location location : locationList) {
 			if (id.equals(location.getiD())) {
-				return location.getName();
+				String locate = null;
+				if (location.getProvinceID().equals("Thành phố Trung ương")) {
+					locate = location.getName().split("Thành phố")[1];
+				} else {
+					locate = location.getName().split("Tỉnh")[1];
+				}
+				return locate;
 			}
 		}
 		

@@ -1,88 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+   
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Job Finder &mdash; Colorlib Website Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-    
+	<jsp:include page="_head.jsp"></jsp:include>
     <link rel="stylesheet" href="css/companyInfoStyle.css">
     
   </head>
   <body>
     <div class="site-wrap">
-
-        <div class="site-mobile-menu">
-          <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-              <span class="icon-close2 js-menu-toggle"></span>
-            </div>
-          </div>
-          <div class="site-mobile-menu-body"></div>
-        </div> <!-- .site-mobile-menu -->
+    	<jsp:include page="_header.jsp"></jsp:include>
         
-        <div class="site-navbar-wrap js-site-navbar bg-white">
-          
-            <div class="container">
-                <div class="site-navbar bg-light">
-                <div class="py-1">
-                    <div class="row align-items-center">
-                    <div class="col-2">
-                        <h2 class="mb-0 site-logo"><a href="${ pageContext.request.contextPath }/">Job<strong class="font-weight-bold">Finder</strong> </a></h2>
-                    </div>
-                    <div class="col-10">
-                        <nav class="site-navigation text-right" role="navigation">
-                        <div class="container">
-                            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="javascript:void(0)" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-        
-                            <ul class="site-menu js-clone-nav d-none d-lg-block">
-                            <li><a href="${ pageContext.request.contextPath }/categories">For Candidates</a></li>
-                            <li class="has-children">
-                                <a href="${ pageContext.request.contextPath }/categories">For Employees</a>
-                                <ul class="dropdown arrow-top">
-                                <li><a href="${ pageContext.request.contextPath }/categories">Category</a></li>
-                                <li><a href="${ pageContext.request.contextPath }/teacherList">Browse Candidates</a></li>
-                                <li><a href="${ pageContext.request.contextPath }/new-post">Post a Job</a></li>
-                                <li><a href="${ pageContext.request.contextPath }/CompanyInfo">Employeer Profile</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="${ pageContext.request.contextPath }/contact">Contact</a></li>
-                            <li><a href="${ pageContext.request.contextPath }/new-post"><span class="bg-primary text-white py-3 px-4 rounded"><span class="icon-plus mr-3"></span>Post New Job</span></a></li>
-                            </ul>
-                        </div>
-                        </nav>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-    
-            
-        </div>
-        
-    </div>
     <div style="height: 113px;"></div>
     <div class="unit-5 overlay" style="background-image: url('images/hero_1.jpg');">
         <div class="container text-center">
@@ -148,6 +78,7 @@
                         <div class='separator'></div>
                         <div class='job-col'>
                             <h2 class='overview'>Available Jobs</h2>
+                            <c:forEach var="form" items="${ formList }">
                             <div class="card">
                                 <div class="row ">
                                     <div class="col-md-3">
@@ -155,23 +86,24 @@
                                     </div>
                                     <div class="col-md-7 px-3">
                                         <div class="card-block px-3">
-                                            <a href='${ pageContext.request.contextPath }/job-info'><h4 class="card-title">Operation Monitor (Linux)</h4></a>
+                                            <a href='${ pageContext.request.contextPath }/job-info'><h4 class="card-title">${ form.title }</h4></a>
     
-                                            <p class="card-text"><i class="fa fa-usd" aria-hidden="true"></i><span id='salary'>You'll love it</span></p>
-                                            <p class="card-text">We are searching for 02 Testers. The job will perform following tasks:- Develop test plans, test procedures, test reports for financial system...</p>
+                                            <p class="card-text"><i class="fa fa-usd" aria-hidden="true"></i><span id='salary'>${ form.salary }</span></p>
+                                            <p class="card-text">${ form.content }</p>
                                             <div class='related'>
-                                                <a href='javascript:void(0)'><p class='related-item' id='first'>Linux</p></a>
-                                                <a href='javascript:void(0)'><p class='related-item'>System Admin</p></a>
-                                                <a href='javascript:void(0)'><p class='related-item'>Networking</p></a>
+                                                <a href='javascript:void(0)'><p class='related-item' id='first'>${ form.position }</p></a>
+                                                <a href='javascript:void(0)'><p class='related-item'>${ form.requirement }</p></a>
+                                                <a href='javascript:void(0)'><p class='related-item'>${ form.contact }</p></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class='col-md-2'>
                                         <div class='noti'>Hot job</div>
-                                        <div class='post-time'>1 days ago</div>
+                                        <div class='post-time'>${ form.date }</div>
                                     </div>
                                 </div>
                             </div>
+                            </c:forEach>
         
                         </div>
                         <div class='separator'></div>
@@ -230,14 +162,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='separator'></div>
+                        <!-- <div class='separator'></div>
                         <div class='location'>
                             <h2 class='overview'>Location</h2>
                             <div class='container location-container'>
-                                <!-- <iframe allowfullscreen class='map' src='www.google.com/maps/place/Keangnam+Hanoi+Landmark+Tower/' style='width:100%'></iframe> -->
+                                <iframe allowfullscreen class='map' src='www.google.com/maps/place/Keangnam+Hanoi+Landmark+Tower/' style='width:100%'></iframe>
                                 <iframe allowfullscreen="" class="map" data-target="employers--location.map" frameborder="0" height="400px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAMccvlWFDk8E9b5Bk6YdPh1ZUht-JPcqU&amp;q=Keangnam+Hanoi+Landmark+Tower%2C+Cau+Giay%2C+Ha+Noi" style="border:0" width="100%"></iframe>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class='col-md-4 review-col'>
@@ -260,11 +192,9 @@
             </div>
         </div>
     </section>
-
-
-        
-  </body>
-
+    
+    <jsp:include page="_footer.jsp"></jsp:include>
+  </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -405,9 +335,5 @@
         captionText.innerHTML = dots[slideIndex-1].alt;
         }
     </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
-        async defer></script>
-
   </body>
 </html>
