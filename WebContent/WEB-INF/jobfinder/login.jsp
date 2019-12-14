@@ -110,7 +110,7 @@
       <div class="container login-form-container"> 
         <div class="row login-form-row">
           <h2 class='login-title'>Login to <a href='#'>QUALK</a></h2>
-          <form action='${pageContent.request.contentPath}/login' method='POST'>
+          <form action='${pageContext.request.contextPath}/login' method='POST'>
 
               <!-- <div class='input-form' id='user-first'>
                   <input class='input'  type='text' placeholder='UserID' name='username'>
