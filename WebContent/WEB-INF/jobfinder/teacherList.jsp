@@ -1,41 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<<<<<<< HEAD
+
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
    <%@include file='header.jsp' %>
-=======
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Job Finder &mdash; Colorlib Website Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/listJobStyle.css">
-    
-  </head>
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
   <body>
   
   <div class="site-wrap">
@@ -108,11 +76,8 @@
         <div class='container list-job-container'>
             <div class='row search-engine'>
                 <form action='#'>
-<<<<<<< HEAD
+
                     <input class='search-input' type='text' placeholder="Use keyword such as Name, Skill, Degree, Location" name='nameToSearch'>
-=======
-                    <input class='search-input' type='text' placeholder="Use keyword such as Name, Skill, Degree, Location">
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
                     <div class='location'>
                         <select>
                             <option value='HaNoi'>Hà Nội</option>
@@ -127,14 +92,14 @@
             <div class='separator' id='for-search'></div>
             <div class='row job-list'>
                 <div class='col-md-9 list-col'>
-<<<<<<< HEAD
-                    <h2 class='title'>4 candidates that matched your require</h2>
+
+                    <h2 class='title'>${count} candidates that matched your require</h2>
                     <!-- -->
                 	 <c:forEach items="${listTeacher}" var="teacher">
-=======
+
                     <h2 class='title'>4 candicates that matched your require</h2>
                     <!-- -->
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
+
                     <div class='list'>
                         <div class="card">
                             <div class="row ">
@@ -143,17 +108,15 @@
                                 </div>
                                 <div class="col-md-7 px-3">
                                     <div class="card-block px-3">
-<<<<<<< HEAD
                                         <a href='file:///Users/teomoney1999/Downloads/jobfinder/job-info.html'><h4 class="card-title">${teacher.name }</h4></a>
     
                                         <p class="card-text"><i class="fa fa-usd" aria-hidden="true"></i><span id='salary'>${teacher.salaryWant}</span></p>
                                         <p class="card-text" id='script'>${teacher.contact}</p>
-=======
+
                                         <a href='file:///Users/teomoney1999/Downloads/jobfinder/job-info.html'><h4 class="card-title">Operation Monitor (Linux)</h4></a>
     
                                         <p class="card-text"><i class="fa fa-usd" aria-hidden="true"></i><span id='salary'>You'll love it</span></p>
                                         <p class="card-text" id='script'>We are searching for 02 Testers. The job will perform following tasks:- Develop test plans, test procedures, test reports for financial system...</p>
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
                                         <div class='related'>
                                             <a href='#'><p class='related-item' id='first'>Linux</p></a>
                                             <a href='#'><p class='related-item'>System Admin</p></a>
@@ -163,9 +126,8 @@
                                 </div>
                                 <div class='col-md-2'>
                                     <div class='noti'>Hot job</div>
-<<<<<<< HEAD
+
                                     <div class='loca'>${teacher.location }</div>
-=======
                                     <div class='loca'>Ha Noi</div>
                                     <div class='post-time'>1 days ago</div>
                                 </div>
@@ -192,22 +154,19 @@
                                 <div class='col-md-2'>
                                     <div class='noti'>Hot job</div>
                                     <div class='loca'>Ha Noi</div>
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
                                     <div class='post-time'>1 days ago</div>
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
                    </div>
                    </c:forEach>
-                        
-=======
+                    
                     </div>
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
                 </div>
                 <div class='col-md-3 spotlight'>
                     <h2 class='title' id='spotlight'>Company Spotlight</h2>
-                    <a href='#'><div class='spotlight-card'>
+                    <a href='#'>
+                    	<div class='spotlight-card'>
                         <img src='images/apexLogo.jpg' style='width:100%'>
                         <div class='spotlight-container container'>
                             <h3 class='company-name'>Apex English</h3>
@@ -230,11 +189,9 @@
         </div>
        
     </section>
-<<<<<<< HEAD
+
     <%@include file='footer.jsp' %>
-=======
-   
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
+
 </div>
 
 

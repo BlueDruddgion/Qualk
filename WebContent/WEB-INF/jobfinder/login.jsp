@@ -63,7 +63,7 @@
                       <li class="has-children">
                         <a href="category.html">For Employees</a>
                         <ul class="dropdown arrow-top">
-<<<<<<< HEAD
+
                           <li><a href="javascript:void(0)">Category</a></li>
                           <li><a href="javascript:void(0)">Browse Candidates</a></li>
                           <li><a href="javascript:void(0)">Post a Job</a></li>
@@ -74,7 +74,7 @@
                               <li><a href="javascript:void(0)">Browse Candidates</a></li>
                               <li><a href="javascript:void(0)">Post a Job</a></li>
                               <li><a href="">Employeer Profile</a></li>
-=======
+
                           <li><a href="category.html">Category</a></li>
                           <li><a href="#">Browse Candidates</a></li>
                           <li><a href="new-post.html">Post a Job</a></li>
@@ -85,7 +85,7 @@
                               <li><a href="#">Browse Candidates</a></li>
                               <li><a href="#">Post a Job</a></li>
                               <li><a href="#">Employeer Profile</a></li>
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
+
                             </ul>
                           </li>
 
@@ -110,12 +110,8 @@
       <div class="container login-form-container"> 
         <div class="row login-form-row">
           <h2 class='login-title'>Login to <a href='#'>QUALK</a></h2>
-          
-<<<<<<< HEAD
-          <form action='${pageContext.request.contextPath}/login' method='POST'>
-=======
           <form action='${pageContent.request.contentPath}/login' method='POST'>
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
+
               <!-- <div class='input-form' id='user-first'>
                   <input class='input'  type='text' placeholder='UserID' name='username'>
                   <button type='submit' id='firstSubmit' class='submit-btn'><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
@@ -163,21 +159,21 @@
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
                   <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Approach</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Services</a></li>
+                    <li><a href="javascript:void(0)">Approach</a></li>
+                    <li><a href="javascript:void(0)">Sustainability</a></li>
+                    <li><a href="javascript:void(0)">News</a></li>
+                    <li><a href="javascript:void(0)">Careers</a></li>
                   </ul>
               </div>
               <div class="col-md-6">
                 <h3 class="footer-heading mb-4 text-white">Categories</h3>
                   <ul class="list-unstyled">
-                    <li><a href="#">Full Time</a></li>
-                    <li><a href="#">Freelance</a></li>
-                    <li><a href="#">Temporary</a></li>
-                    <li><a href="#">Internship</a></li>
+                    <li><a href="javascript:void(0)">Full Time</a></li>
+                    <li><a href="javascript:void(0)">Freelance</a></li>
+                    <li><a href="javascript:void(0)">Temporary</a></li>
+                    <li><a href="javascript:void(0)">Internship</a></li>
                   </ul>
               </div>
             </div>

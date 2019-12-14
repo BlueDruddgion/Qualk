@@ -90,11 +90,7 @@ public class DBUtils {
 	}
 	
 	public static List<TeacherCV> UC_TimKiemGiaoVien(Connection conn, String name) throws SQLException {
-<<<<<<< HEAD
 		String query = "Select * from Teacher_info where name = '?'";
-=======
-		String query = "Select * from TeacherCV where name = ?";
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, name);
 		ResultSet rs = ps.executeQuery();
@@ -108,11 +104,8 @@ public class DBUtils {
 	}
 	
 	public static void UC_ThemTrungTam(Connection conn, CenterInfo center) throws SQLException {
-<<<<<<< HEAD
+
 		String query = "Insert into Center_Info (User_ID, Name, Specialize, Address, Contact, Available, Location_ID) "
-=======
-		String query = "Insert into CenterInfo (User_ID, Name, Specialize, Address, Contact, Available, Location_ID) "
->>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
 				+ "values (?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, center.getUserID());
