@@ -1,9 +1,12 @@
 package qualk.servlet;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+=======
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,12 +14,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
 
 import qualk.beans.User;
 import qualk.beans.TeacherCV;
 import qualk.utils.DBUtils;
 import qualk.utils.MyUtils;
+=======
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
 
 @WebServlet(urlPatterns = {"/teacherList"})
 public class TeacherListServlet extends HttpServlet {
@@ -24,6 +30,7 @@ public class TeacherListServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
 		
 		HttpSession session = req.getSession(); 
 		
@@ -50,6 +57,8 @@ public class TeacherListServlet extends HttpServlet {
 		req.setAttribute("listTeacher", listTeacher); 
 		req.setAttribute("count", count);
 		
+=======
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
 		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/teacherList.jsp");
 		dispatcher.forward(req, resp);

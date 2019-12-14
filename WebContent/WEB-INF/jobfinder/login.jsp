@@ -63,6 +63,7 @@
                       <li class="has-children">
                         <a href="category.html">For Employees</a>
                         <ul class="dropdown arrow-top">
+<<<<<<< HEAD
                           <li><a href="javascript:void(0)">Category</a></li>
                           <li><a href="javascript:void(0)">Browse Candidates</a></li>
                           <li><a href="javascript:void(0)">Post a Job</a></li>
@@ -73,6 +74,18 @@
                               <li><a href="javascript:void(0)">Browse Candidates</a></li>
                               <li><a href="javascript:void(0)">Post a Job</a></li>
                               <li><a href="">Employeer Profile</a></li>
+=======
+                          <li><a href="category.html">Category</a></li>
+                          <li><a href="#">Browse Candidates</a></li>
+                          <li><a href="new-post.html">Post a Job</a></li>
+                          <li><a href="#">Employeer Profile</a></li>
+                          <li class="has-children">
+                            <a href="#">More Links</a>
+                            <ul class="dropdown">
+                              <li><a href="#">Browse Candidates</a></li>
+                              <li><a href="#">Post a Job</a></li>
+                              <li><a href="#">Employeer Profile</a></li>
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
                             </ul>
                           </li>
 
@@ -98,7 +111,11 @@
         <div class="row login-form-row">
           <h2 class='login-title'>Login to <a href='#'>QUALK</a></h2>
           
+<<<<<<< HEAD
           <form action='${pageContext.request.contextPath}/login' method='POST'>
+=======
+          <form action='${pageContent.request.contentPath}/login' method='POST'>
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
               <!-- <div class='input-form' id='user-first'>
                   <input class='input'  type='text' placeholder='UserID' name='username'>
                   <button type='submit' id='firstSubmit' class='submit-btn'><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>

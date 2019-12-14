@@ -2,7 +2,42 @@
    pageEncoding="UTF-8"%>
    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<<<<<<< HEAD
 <%@include file='header.jsp' %>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Job Finder &mdash; Colorlib Website Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/listFormStyle.css">
+    <link rel="stylesheet" href="css/listJobStyle.css">
+    
+  </head>
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
   <body>
     <div class="site-wrap">
 
@@ -145,7 +180,11 @@
             </div>
            
         </section>
+<<<<<<< HEAD
         <%@include file='footer.jsp' %>
+=======
+       
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
     </div>
     
     

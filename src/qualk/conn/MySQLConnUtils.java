@@ -11,8 +11,13 @@ public class MySQLConnUtils {
      // Chú ý: Thay đổi các thông số kết nối cho phù hợp.
      String hostName = "localhost";
      String dbName = "QUALK";
+<<<<<<< HEAD
      String userName = "root";
      String password = "quocanh1999";
+=======
+     String userName = "beo";
+     String password = "Hai@1999";
+>>>>>>> c60758c9d2e6a0a65517f10b841b03cca74ee229
      return getMySQLConnection(hostName, dbName, userName, password);
  }
   
