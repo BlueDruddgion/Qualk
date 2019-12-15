@@ -32,6 +32,8 @@ public class ListOfFormServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		int formCount = formList.size();
+		req.setAttribute("formCount", formCount);
 		req.setAttribute("formList", formList);
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/listOfForm.jsp");
 		dispatcher.forward(req, resp);

@@ -35,26 +35,19 @@ public class JDBCFilter implements Filter {
     }
  
     private boolean needJDBC(HttpServletRequest request) {
-        System.out.println("JDBC Filter");
-        // 
-        // Servlet Url-pattern: /spath/*
-        // 
-        // => /spath
+//        System.out.println("JDBC Filter");
         String servletPath = request.getServletPath();
-        // => /abc/mnp
         String pathInfo = request.getPathInfo();
  
         String urlPattern = servletPath;
  
         if (pathInfo != null) {
-            // => /spath/*
             urlPattern = servletPath + "/*";
         }
  
         // Key: servletName.
         // Value: ServletRegistration
-        Map<String, ? extends ServletRegistration> servletRegistrations = request.getServletContext()
-                .getServletRegistrations();
+        Map<String, ? extends ServletRegistration> servletRegistrations = request.getServletContext().getServletRegistrations();
  
         Collection<? extends ServletRegistration> values = servletRegistrations.values();
         for (ServletRegistration sr : values) {

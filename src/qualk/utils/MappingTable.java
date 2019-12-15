@@ -7,6 +7,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import qualk.beans.Location;
+import qualk.beans.TeacherCV;
+import qualk.beans.User;
 
 public class MappingTable {
 	public static String locationFromID(HttpServletRequest request, String id) throws SQLException {
@@ -23,7 +25,18 @@ public class MappingTable {
 				return locate;
 			}
 		}
-		
+		return null;
+	}
+	
+	public static TeacherCV loadTeacherCVFromUser(HttpServletRequest request, String userName) throws SQLException {
+		Connection conn = (Connection) request.getAttribute("ATTRIBUTE_FOR_CONNECTION");
+		List<User> userList = DBUtils.List_User(conn);
+		for (User user : userList) {
+			if (userName.equals(user.getUserName())) {
+				TeacherCV teacher = DBUtils.UC_TimKiemGiaoVien(conn, user.getiD());
+				return teacher;
+			}
+		}
 		return null;
 	}
 }

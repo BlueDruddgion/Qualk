@@ -29,7 +29,17 @@
                         </ul>
                       </li>
                       <li><a href="${ pageContext.request.contextPath }/contact">Contact</a></li>
-                      <li><a href="${ pageContext.request.contextPath }/new-post"><span class="bg-primary text-white py-3 px-4 rounded"><span class="icon-plus mr-3"></span>Post New Job</span></a></li>
+                      <%-- <li><a href="${ pageContext.request.contextPath }/new-post"><span class="bg-primary text-white py-3 px-4 rounded"><span class="icon-plus mr-3"></span>Post New Job</span></a></li> --%>
+                      <li id='login-zone'>
+                        <a href="${ pageContext.request.contextPath }/CVInfo">
+                          <div class="login-area">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <div class="card-body">
+                              <h5 class="card-title">${ user.userName }</h5>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </nav>

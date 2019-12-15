@@ -30,12 +30,12 @@ public class MyUtils {
 	public static void storeUserInfo(HttpSession session, User user) {
 		
 		// on jsp access via ${user}
-		session.setAttribute("loginedUser", user);
+		session.setAttribute("user", user);
 	}
 	
 	// get user information in session
 	public static User getLoginedUser(HttpSession session) {
-		User loginedUser = (User) session.getAttribute("loginedUser");
+		User loginedUser = (User) session.getAttribute("user");
 		return loginedUser;
 	}
 	

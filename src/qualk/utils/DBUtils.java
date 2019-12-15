@@ -41,20 +41,45 @@ public class DBUtils {
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, username);
 		ResultSet rs = ps.executeQuery();
-		while (rs.next() ) {
-			User u = new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
-			return u;
+		while (rs.next()) {
+			User user = new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+			return user;
 		}
 		return null;
 	}
 	
+	public static List<User> UC_TimkiemListUser(Connection conn, String username) throws SQLException {
+		String query = "Select * from user where username = ?";
+		PreparedStatement ps = conn.prepareStatement(query);
+		List<User> userList = new ArrayList<>();
+		ps.setString(1, username);
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+			User user = new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+			userList.add(user);
+		}
+		return userList;
+	}
+	
+	public static List<User> List_User(Connection conn) throws SQLException {
+		List<User> userList = new ArrayList<>();
+		String query = "Select * from user";
+		PreparedStatement ps = conn.prepareStatement(query);
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+			User user = new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+			userList.add(user);
+		}
+		return userList;
+	}
+	
 	public static void UC_ThemGiaoVien(Connection conn, TeacherCV teacher) throws SQLException {
-		String query = "Insert into TeacherCV (Location_ID, Name, BirthDate, Address, Degree, Experiences, Contact, Skills, Available, Salary_Want) "
+		String query = "Insert into Teacher_info (Location_ID, Name, BirthDate, Address, Degree, Experiences, Contact, Skills, Available, Salary_Want) "
 				+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, teacher.getLocationID());
 		ps.setString(2, teacher.getName());
-		ps.setDate(3, teacher.getBirthDate());
+		ps.setDate(3, (Date) teacher.getBirthDate());
 		ps.setString(4, teacher.getAddress());
 		ps.setString(5, teacher.getDegree());
 		ps.setString(6, teacher.getExperiences());
@@ -66,11 +91,11 @@ public class DBUtils {
 	}
 	
 	public static void UC_SuaGiaoVien(Connection conn, TeacherCV teacher) throws SQLException {
-		String query = "Update TeacherCV set Location_ID=?, Name=?, BirthDate=?, Address=?, Degree=?, Experiences=?, Contact=?, Skills=?, Available=?, Salary_Want=? where id=?";
+		String query = "Update Teacher_info set Location_ID=?, Name=?, BirthDate=?, Address=?, Degree=?, Experiences=?, Contact=?, Skills=?, Available=?, Salary_Want=? where id=?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, teacher.getLocationID());
 		ps.setString(2, teacher.getName());
-		ps.setDate(3, teacher.getBirthDate());
+		ps.setDate(3, (Date) teacher.getBirthDate());
 		ps.setString(4, teacher.getAddress());
 		ps.setString(5, teacher.getDegree());
 		ps.setString(6, teacher.getExperiences());
@@ -83,28 +108,26 @@ public class DBUtils {
 	}
 	
 	public static void UC_XoaGiaoVien(Connection conn, String id) throws SQLException {
-		String query = "Delete from TeacherCV where id = ?";
+		String query = "Delete from Teacher_info where id = ?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, id);
 		ps.executeUpdate();
 	}
 	
-	public static List<TeacherCV> UC_TimKiemGiaoVien(Connection conn, String name) throws SQLException {
-		String query = "Select * from TeacherCV where name = ?";
+	public static TeacherCV UC_TimKiemGiaoVien(Connection conn, String id) throws SQLException {
+		String query = "Select * from Teacher_Info where user_id = ?";
 		PreparedStatement ps = conn.prepareStatement(query);
-		ps.setString(1, name);
+		ps.setString(1, id);
 		ResultSet rs = ps.executeQuery();
-		List<TeacherCV> teacherData = new ArrayList<>();
-		while (rs.next()) {
-			TeacherCV t = new TeacherCV(rs.getString(1), rs.getString(2), rs.getString(3), rs.getDate(4), rs.getString(5), rs.getString(6), 
-					rs.getString(7), rs.getString(8), rs.getString(9), rs.getBoolean(10), rs.getInt(11));
-			teacherData.add(t);
+		TeacherCV teacher = null;
+		if (rs.next()) {
+			teacher = new TeacherCV(rs.getString(1), rs.getString(3), rs.getString(4), rs.getDate(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getBoolean(11), rs.getInt(12));
 		}
-		return teacherData;
+		return teacher;
 	}
 	
 	public static void UC_ThemTrungTam(Connection conn, CenterInfo center) throws SQLException {
-		String query = "Insert into CenterInfo (User_ID, Name, Specialize, Address, Contact, Available, Location_ID) "
+		String query = "Insert into Center_Info (User_ID, Name, Specialize, Address, Contact, Available, Location_ID) "
 				+ "values (?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, center.getUserID());
@@ -118,7 +141,7 @@ public class DBUtils {
 	}
 	
 	public static void UC_SuaTrungTam(Connection conn, CenterInfo center) throws SQLException {
-		String query = "Update CenterInfo set User_ID=?, Name=?, Specialize=?, Address=?, Contact=?, Available=?, Location_ID=? where id=?";
+		String query = "Update Center_Info set User_ID=?, Name=?, Specialize=?, Address=?, Contact=?, Available=?, Location_ID=? where id=?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, center.getUserID());
 		ps.setString(2, center.getName());
@@ -132,7 +155,7 @@ public class DBUtils {
 	}
 	
 	public static void UC_XoaTrungTam(Connection conn, String id) throws SQLException {
-		String query = "Delete from CenterInfo where id=?";
+		String query = "Delete from Center_Info where id=?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, id);
 		ps.executeUpdate();
@@ -140,7 +163,7 @@ public class DBUtils {
 	
 	public static List<CenterInfo> UC_TimKiemTrungTam(Connection conn, String name) throws SQLException {
 		List<CenterInfo> centerData = new ArrayList<>();
-		String query = "Select * from CenterInfo where name=?";
+		String query = "Select * from Center_Info where name=?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, name);
 		ResultSet rs = ps.executeQuery();
@@ -196,7 +219,7 @@ public class DBUtils {
 	}
 	
 	public static void UC_ThemBTD(Connection conn, Form f) throws SQLException {
-		String query = "Insert into Form (Location_ID, Title, Salary, DateStart, Content, Position, Requirement, Contact, DateEnd) "
+		String query = "Insert into rescruiment_Form (Location_ID, Title, Salary, DateStart, Content, Position, Requirement, Contact, DateEnd) "
 				+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, f.getLocationID());
@@ -212,7 +235,7 @@ public class DBUtils {
 	}
 	
 	public static void UC_SuaBTD(Connection conn, Form f) throws SQLException{
-		String query = "Update Form set Location_ID=?, Title=?, Salary=?, DateStart=?, Content=?, Position=?, Requirement=?, Contact=?, DateEnd=?"
+		String query = "Update rescruiment_Form set Location_ID=?, Title=?, Salary=?, DateStart=?, Content=?, Position=?, Requirement=?, Contact=?, DateEnd=?"
 				+ "where id=?";
 		
 		PreparedStatement ps = conn.prepareStatement(query);
@@ -230,7 +253,7 @@ public class DBUtils {
 	}
 	
 	public static void UC_XoaBTD(Connection conn, String id) throws SQLException{
-		String query = "Delete from Form where id = ?";
+		String query = "Delete from rescruiment_Form where id = ?";
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, id);
 		ps.executeUpdate();
@@ -248,6 +271,18 @@ public class DBUtils {
 			formData.add(f);
 		}
 		return formData;
+	}
+	
+	public static Form UC_TimKiemBTDbyID(Connection conn, String id) throws SQLException {
+		String query = "Select * from rescruiment_form where id = ?";
+		PreparedStatement ps = conn.prepareStatement(query);
+		ps.setString(1, id);
+		ResultSet rs = ps.executeQuery();
+		if (rs.next()) {
+			Form f = new Form(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getDate(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getDate(10));
+			return f;
+		}
+		return null;
 	}
 	
 	public static List<Form> UC_ListBTD(Connection conn) throws SQLException{
@@ -353,5 +388,17 @@ public class DBUtils {
 			locationList.add(location);
 		}
 		return locationList;
+	}
+	
+	public static List<TeacherCV> UC_TimKiemTeacher(Connection conn) throws SQLException {
+		String query = "Select * from Teacher_info";
+		PreparedStatement ps = conn.prepareStatement(query);
+		ResultSet rs = ps.executeQuery();
+		List<TeacherCV> teacherList = new ArrayList<>();
+		while (rs.next()) {
+			TeacherCV teacher = new TeacherCV(rs.getString(1), rs.getString(3), rs.getString(4), rs.getDate(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getBoolean(11), rs.getInt(12));
+			teacherList.add(teacher);
+		}
+		return teacherList;
 	}
 }

@@ -126,7 +126,7 @@
             <h2 class="mb-5 h3">Recent Jobs</h2>
             <div class="rounded border jobs-wrap">
 
-              <a href="${ pageContext.request.contextPath }/job-single" class="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
+              <a href="javascript:void(0)" class="job-item d-block d-md-flex align-items-center  border-bottom fulltime">
                 <div class="company-logo blank-logo text-center text-md-left pl-3">
                   <img src="images/company_logo_blank.png" alt="Image" class="img-fluid mx-auto">
                 </div>
@@ -147,7 +147,7 @@
                 </div>  
               </a>
 
-              <a href="${ pageContext.request.contextPath }/job-single" class="job-item d-block d-md-flex align-items-center freelance">
+              <a href="javascript:void(0)" class="job-item d-block d-md-flex align-items-center freelance">
                 <div class="company-logo blank-logo text-center text-md-left pl-3">
                   <img src="images/logo_1.png" alt="Image" class="img-fluid mx-auto">
                 </div>
@@ -169,7 +169,7 @@
               </a>
 
 
-              <a href="${ pageContext.request.contextPath }/job-single" class="job-item d-block d-md-flex align-items-center freelance">
+              <a href="javascript:void(0)" class="job-item d-block d-md-flex align-items-center freelance">
                 <div class="company-logo blank-logo text-center text-md-left pl-3">
                   <img src="images/logo_1.png" alt="Image" class="img-fluid mx-auto">
                 </div>
@@ -191,7 +191,7 @@
               </a>
 
 
-              <a href="${ pageContext.request.contextPath }/job-single" class="job-item d-block d-md-flex align-items-center fulltime">
+              <a href="javascript:void(0)" class="job-item d-block d-md-flex align-items-center fulltime">
                 <div class="company-logo blank-logo text-center text-md-left pl-3">
                   <img src="images/company_logo_blank.png" alt="Image" class="img-fluid mx-auto">
                 </div>
@@ -212,7 +212,7 @@
                 </div>  
               </a>
 
-              <a href="${ pageContext.request.contextPath }/job-single" class="job-item d-block d-md-flex align-items-center partime">
+              <a href="javascript:void(0)" class="job-item d-block d-md-flex align-items-center partime">
                 <div class="company-logo blank-logo text-center text-md-left pl-3">
                   <img src="images/logo_2.png" alt="Image" class="img-fluid mx-auto">
                 </div>
@@ -236,7 +236,7 @@
             </div>
 
             <div class="col-md-12 text-center mt-5">
-              <a href="${ pageContext.request.contextPath }/list-job" class="btn btn-primary rounded py-3 px-5"><span class="icon-plus-circle"></span> Show More Jobs</a>
+              <a href="${ pageContext.request.contextPath }/listOfForm" class="btn btn-primary rounded py-3 px-5"><span class="icon-plus-circle"></span> Show More Jobs</a>
             </div>
           </div>
           <div class="col-md-4 block-16" data-aos="fade-up" data-aos-delay="200">
@@ -333,7 +333,7 @@
           <div class="col-md-6 text-center" data-aos="fade">
             <h1 class="h3 mb-0">Your Dream Job</h1>
             <p class="h3 text-white mb-5">Is Waiting For You</p>
-            <p><a href="${ pageContext.request.contextPath }/home" class="btn btn-outline-warning py-3 px-4">Find Jobs</a> <a href="${ pageContext.request.contextPath }/list-job" class="btn btn-warning py-3 px-4">Apply For A Job</a></p>
+            <p><a href="${ pageContext.request.contextPath }/home" class="btn btn-outline-warning py-3 px-4">Find Jobs</a> <a href="${ pageContext.request.contextPath }/listOfForm" class="btn btn-warning py-3 px-4">Apply For A Job</a></p>
             
           </div>
         </div>

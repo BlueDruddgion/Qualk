@@ -23,6 +23,7 @@
         </div>
     </section> -->
 
+	
 
     <section class='register-body'>
         <div class='container register-contain'>
@@ -200,7 +201,29 @@
                         </div>
                     </div>
                     <div class='separator'></div>
-                    <button type='submit' id='confirm-btn'>Confirm</button>
+                    <button onclick="javascript:{checkSucceeded(); checkFailed()}" type='submit' id='confirm-btn'>Confirm</button>
+                    
+                    <input type="hidden" value="${ errorString }" name="errorString" id="errorString">
+                    <input type="hidden" value="${ succeeded }" name="succeeded" id="succeeded">
+                    <script>
+                    	function checkSucceeded() {
+                    		var succeeded = document.getElementById('succeeded').value
+                    		console.log(succeeded)
+                    		
+                    		if (succeeded != null) {
+                    			alert(succeeded)
+                    		}
+                    	}
+                    	
+                    	function checkFailed() {
+                    		var errorString = document.getElementById('errorString').value
+                    		console.log(errorString)
+                    		
+                    		if (errorString != null) {
+                    			alert(errorString)
+                    		}
+                    	}
+                    </script>
                 </form>
                 </div>
             </div>

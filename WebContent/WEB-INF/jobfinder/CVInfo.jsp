@@ -20,11 +20,11 @@
         <div class='container cv-header-container'>
             <div class='row cv-header-row'>
                 <div class='cv-header-info'>
-                    <h1 class='header-title'>Quoc Anh Truong</h1>
-                    <p class='header-info'>Your UserID is teomoney1999</p>
+                    <h1 class='header-title'>${ teacher.name }</h1>
+                    <p class='header-info'>Your UserID is ${ user.userName }</p>
                 </div>
                 
-                <a class='sign-out' href='${ pageContext.request.contextPath }/home'><button type='submit' class='signout-btn active'>Sign Out</button></a>
+                <a class='sign-out' href='${ pageContext.request.contextPath }/LogoutServlet'><button type='submit' class='signout-btn active'>Sign Out</button></a>
     
             </div>
         </div>
@@ -39,26 +39,26 @@
                 <div class='col-md-4 info'>
                     <div class='info-part'>
                         <h2 class='info-key'>UserID</h2>
-                        <p class='info-value'>teomoney1999</p>
+                        <p class='info-value'>${ user.userName }</p>
                     </div>
                     <div class='info-part'>
                         <h2 class='info-key'>Full Name</h2>
-                        <p class='info-value'>Truong Quoc Anh</p>
+                        <p class='info-value'>${ teacher.name }</p>
                     </div>
                     <div class='info-part'>
                         <h2 class='info-key'>Birthday</h2>
-                        <p class='info-value'>25/02/1999</p>
+                        <p class='info-value'>${ teacher.birthDate }</p>
                     </div>
                     <div class='info-part'>
                         <h2 class='info-key'>Address</h2>
-                        <p class='info-value'>Yen Hoa, Cau Giay, Ha Noi</p>
+                        <p class='info-value'>${ teacher.address }</p>
                     </div>
                     
                 </div>
                 <div class='col-md-4 trust-reach'>
                     <div class='info-part'>
                         <h2 class='info-key'>Email</h2>
-                        <p class='info-value'>teomoney1999@gmail.com</p>
+                        <p class='info-value'>${ user.email }</p>
                     </div>
                     <div class='info-part'>
                         <h2 class='info-key'>Phone</h2>
@@ -75,21 +75,40 @@
         <div class='container section-container'>
             <div class='row cv-row'>
                 <div class='col-md-3 title'>
+                    <h1 class='title-name'>Security</h1>
+                </div>
+                <div class='col-md-4 info'>
+                    <div class='info-part'>
+                        <h2 class='info-key'>Password</h2>
+                        <p class='info-value'>${ user.password }</p>
+                    </div>
+                    <div class='info-part'>
+                        <h2 class='info-key'>Remember password</h2>
+                        <p class='info-value'>25/02/1999</p>
+                    </div>
+                </div>
+             </div>
+             <div class='separator'></div>
+         </div>
+        
+        <div class='container section-container'>
+            <div class='row cv-row'>
+                <div class='col-md-3 title'>
                     <h1 class='title-name'>Specialize</h1>
                 </div>
                 <div class='col-md-4 info'>
                     <div class='info-part'>
                         <h2 class='info-key'>Degree</h2>
-                        <p class='info-value'>None</p>
+                        <p class='info-value'>${ teacher.degree }</p>
                     </div>
                     <div class='info-part'>
                         <h2 class='info-key'>Experience</h2>
-                        <p class='info-value'>2 years</p>
+                        <p class='info-value'>${ teacher.experiences }</p>
                     </div>
                 </div>
                 <div class='col-md-4 trust-reach'>
                     <h2 class='info-key'>Expected Salary</h2>
-                    <p class='info-value'>100000000$</p>
+                    <p class='info-value'>${ teacher.salaryWant }$</p>
                 </div>
                 <div class='col-md-1 edit-button'>
                     <button class='change-btn'>Edit</button>
@@ -106,11 +125,11 @@
                 <div class='col-md-9 info'>
                     <h2 class='info-key'>Available</h2>
                     <p class='info-value'>
-                        Yes
+                        ${ teacher.available }
                     </p>
                     <h2 class='info-key'>Creative Area</h2>
                     <p class='info-value'>
-                        <a href='javascript:void(0)'><button class='upload-btn'>Upload your CV info</button></a>
+                        <a href='javascript:alert("Unable to upload your CV")'><button class='upload-btn'>Upload your CV info</button></a>
                     </p>
                     <h2 class='info-key'>Cover letter</h2>
                     <p class='info-value'>

@@ -1,6 +1,6 @@
 package qualk.beans;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class TeacherCV {
 	private String iD;
@@ -15,9 +15,6 @@ public class TeacherCV {
 	private Boolean available;
 	private int salaryWant;
 	
-	public TeacherCV() {
-		
-	}
 	
 
 	public TeacherCV(String iD, String locationID, String name, Date birthDate, String address, String degree,
@@ -35,6 +32,19 @@ public class TeacherCV {
 		this.salaryWant = salaryWant;
 	}
 
+	public TeacherCV(String locationID, String name, Date birthDate, String address, String degree,
+			String experiences, String contact, String skill, Boolean available, int salaryWant) {
+		this.locationID = locationID;
+		this.name = name;
+		this.birthDate = birthDate;
+		this.address = address;
+		this.degree = degree;
+		this.experiences = experiences;
+		this.contact = contact;
+		this.skill = skill;
+		this.available = available;
+		this.salaryWant = salaryWant;
+	}
 
 	public String getiD() {
 		return iD;
