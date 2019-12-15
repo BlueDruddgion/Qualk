@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -174,7 +176,7 @@
                         <div class="title-block">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3 class="title"> Giáo Viên <a href="item-editor.html" class="btn btn-primary btn-sm rounded-s"> Add New </a>
+                                    <h3 class="title"> Trung Tâm <a href="item-editor.html" class="btn btn-primary btn-sm rounded-s"> Add New </a>
                                         <!--
 				 -->
                                         <div class="action dropdown">
@@ -216,34 +218,25 @@
                                             <span></span>
                                         </div>
                                     </div>
-                                    <div class="item-col item-col-header item-col-name">
+                                    <div class="item-col item-col-header item-col-name" >
                                         <div>
                                             <span>Tên</span>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-header item-col-age text-center">
                                         <div>
-                                            <span>Tuổi</span>
+                                            <span>Địa Chỉ</span>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-header item-col-salary">
                                         <div class="no-overflow">
-                                            <span>Lương</span>
+                                            <span>Chuyên Ngành</span>
                                         </div>
                                     </div>
-                                    <div class="item-col item-col-header item-col-subject">
-                                        <div class="no-overflow">
-                                            <span>Chuyên ngành</span>
-                                        </div>
-                                    </div>
-                                    <div class="item-col item-col-header item-col-degree">
-                                        <div class="no-overflow">
-                                            <span>Bằng cấp</span>
-                                        </div>
-                                    </div>
+
                                     <div class="item-col item-col-header item-col-contact">
                                         <div>
-                                            <span>Liên lạc</span>
+                                            <span>Liên Lạc</span>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-header fixed item-col-actions-dropdown">
@@ -265,39 +258,28 @@
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
                                         </a>
                                     </div>
-                                    <div class="item-col fixed  item-col-name">
+                                    <div class="item-col  item-col-name">
                                         <div class="item-heading">Name</div>
                                         <div>
                                             <a href="item-editor.html" class="">
-                                                <h4 class="item-title no-wrap"> Nguyen Van A </h4>
+                                                <h4 class="item-title no-wrap"> Thiên Ngọc Minh Uy</h4>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-age text-center">
-                                        <div class="item-heading">age</div>
-                                        <div> 23 </div>
+                                        <div class="item-heading">Address</div>
+                                        <div> Tổ 1 khu 2 </div>
                                     </div>
                                     <div class="item-col item-col-subject no-overflow">
-                                        <div class="item-heading">Stats</div>
+                                        <div class="item-heading"></div>
                                         <div class="no-overflow">
-                                            200000000
+                                            Tiếng Anh
                                         </div>
                                     </div>
-                                    <div class="item-col item-col-subject no-overflow">
-                                        <div class="item-heading">Category</div>
-                                        <div class="no-overflow">
-                                            <a href="">English</a>
-                                        </div>
-                                    </div>
-                                    <div class="item-col item-col-degree">
-                                        <div class="item-heading">Author</div>
-                                        <div class="no-overflow">
-                                            <a href="">600 TOEIC</a>
-                                        </div>
-                                    </div>
+
                                     <div class="item-col item-col-contact">
                                         <div class="item-heading">Published</div>
-                                        <div class="no-overflow"> 0111111111 </div>
+                                        <div class="no-overflow"> 0112262622 </div>
                                     </div>
                                     <div class="item-col fixed item-col-actions-dropdown">
                                         <div class="item-actions-dropdown">

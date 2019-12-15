@@ -1914,7 +1914,7 @@ span a {
 
 .dashboard-page #dashboard-downloads-chart,
 .dashboard-page #dashboard-visits-chart {
-  height: 220px; }
+  height: 220px; }  
 
 @media (max-width: 575.98px) {
   .dashboard-page .items .card-header {

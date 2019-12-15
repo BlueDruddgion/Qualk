@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -174,7 +176,7 @@
                         <div class="title-block">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h3 class="title"> Giáo Viên <a href="item-editor.html" class="btn btn-primary btn-sm rounded-s"> Add New </a>
+                                    <h3 class="title"> Tuyển Dụng <a href="item-editor.html" class="btn btn-primary btn-sm rounded-s"> Add New </a>
                                         <!--
 				 -->
                                         <div class="action dropdown">
@@ -211,19 +213,14 @@
                                             <span></span>
                                         </label>
                                     </div>
-                                    <div class="item-col item-col-header fixed item-col-img md">
-                                        <div>
-                                            <span></span>
-                                        </div>
-                                    </div>
                                     <div class="item-col item-col-header item-col-name">
                                         <div>
-                                            <span>Tên</span>
+                                            <span>Trung Tâm</span>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-header item-col-age text-center">
                                         <div>
-                                            <span>Tuổi</span>
+                                            <span>Vị Trí</span>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-header item-col-salary">
@@ -238,7 +235,7 @@
                                     </div>
                                     <div class="item-col item-col-header item-col-degree">
                                         <div class="no-overflow">
-                                            <span>Bằng cấp</span>
+                                            <span>Yêu Cầu</span>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-header item-col-contact">
@@ -260,22 +257,18 @@
                                             <span></span>
                                         </label>
                                     </div>
-                                    <div class="item-col fixed item-col-img md">
-                                        <a href="item-editor.html">
-                                            <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
-                                        </a>
-                                    </div>
-                                    <div class="item-col fixed  item-col-name">
+
+                                    <div class="item-col  item-col-name">
                                         <div class="item-heading">Name</div>
                                         <div>
                                             <a href="item-editor.html" class="">
-                                                <h4 class="item-title no-wrap"> Nguyen Van A </h4>
+                                                <h4 class="item-title no-wrap no-gutters"> ABC Hà Nội </h4>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="item-col item-col-age text-center">
                                         <div class="item-heading">age</div>
-                                        <div> 23 </div>
+                                        <div> Cưa bom chuyên nghiệp </div>
                                     </div>
                                     <div class="item-col item-col-subject no-overflow">
                                         <div class="item-heading">Stats</div>
