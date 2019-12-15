@@ -11,8 +11,7 @@
   <div class="site-wrap">
     
     <jsp:include page="_header.jsp"></jsp:include>
-      
-    <div style="height: 113px;"></div>
+   
     <!-- <section class='register'>
         <div class='register-intro'>
             <div class='container register-container'>
@@ -22,7 +21,17 @@
             </div>
         </div>
     </section> -->
-
+	<input type="hidden" value="${ errorString }" name="errorString" id="errorString">
+	<input type="hidden" value="${ hasError }" name="hasError" id="hasError">
+	<script>
+		var hasError = document.getElementById('hasError').value
+		console.log(hasError)
+		if (hasError) {
+			var errorString = document.getElementById('errorString').value
+			console.log(errorString)
+			alert(errorString)
+		}
+	</script>
 	
 
     <section class='register-body'>
@@ -32,7 +41,7 @@
                 <form action="${ pageContext.request.contextPath }/createAccount" method="post">  <!-- red -->
                     <div class='script-container'>
                         <p class='script'>Want a job? Create an UserID and find one !</p>
-                        <p class='script'>Already have UserID? <a href='${ pageContext.request.contextPath }/list-job'>Let's go and find your perfect job<span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a></p>
+                        <p class='script'>Already have UserID? <a href='${ pageContext.request.contextPath }/listOfForm'>Let's go and find your perfect job<span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a></p>
                     </div>
                     <div class='fill-info'>
                         <div class='about-info'>
@@ -201,29 +210,7 @@
                         </div>
                     </div>
                     <div class='separator'></div>
-                    <button onclick="javascript:{checkSucceeded(); checkFailed()}" type='submit' id='confirm-btn'>Confirm</button>
-                    
-                    <input type="hidden" value="${ errorString }" name="errorString" id="errorString">
-                    <input type="hidden" value="${ succeeded }" name="succeeded" id="succeeded">
-                    <script>
-                    	function checkSucceeded() {
-                    		var succeeded = document.getElementById('succeeded').value
-                    		console.log(succeeded)
-                    		
-                    		if (succeeded != null) {
-                    			alert(succeeded)
-                    		}
-                    	}
-                    	
-                    	function checkFailed() {
-                    		var errorString = document.getElementById('errorString').value
-                    		console.log(errorString)
-                    		
-                    		if (errorString != null) {
-                    			alert(errorString)
-                    		}
-                    	}
-                    </script>
+                    <input type='submit' id='confirm-btn' name='Confirm' placeholder="Confirm"><!-- Confirm -->                                    
                 </form>
                 </div>
             </div>

@@ -28,6 +28,17 @@ public class MappingTable {
 		return null;
 	}
 	
+	public static String locationIDFromLocation(HttpServletRequest request, String location) throws SQLException {
+		Connection conn = (Connection) request.getAttribute("ATTRIBUTE_FOR_CONNECTION");
+		List<Location> locationList = DBUtils.UC_Location(conn);
+		for (Location locate : locationList) {
+			if (location.equals(locate.getName())) {
+				return locate.getiD();
+			}
+		}
+		return null;
+	}
+	
 	public static TeacherCV loadTeacherCVFromUser(HttpServletRequest request, String userName) throws SQLException {
 		Connection conn = (Connection) request.getAttribute("ATTRIBUTE_FOR_CONNECTION");
 		List<User> userList = DBUtils.List_User(conn);

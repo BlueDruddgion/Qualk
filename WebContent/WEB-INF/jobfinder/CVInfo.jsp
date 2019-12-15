@@ -14,7 +14,6 @@
   <div class="site-wrap">
   	 
   	 <jsp:include page='_header.jsp'></jsp:include>
-  	 <div style="height: 113px;"></div>
   	 
      <section class='cv-header'>
         <div class='container cv-header-container'>

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import qualk.beans.Form;
 import qualk.utils.DBUtils;
+import qualk.utils.MappingTable;
 
 @WebServlet(urlPatterns = {"/job-info"})
 public class JobInfoServlet extends HttpServlet {
@@ -25,10 +26,11 @@ public class JobInfoServlet extends HttpServlet {
 		Form form = null;
 		try {
 			form = DBUtils.UC_TimKiemBTDbyID(conn, id);
+			form.setLocationID(MappingTable.locationFromID(req, form.getLocationID()));
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		req.setAttribute("form", form);
 		
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/job-info.jsp");

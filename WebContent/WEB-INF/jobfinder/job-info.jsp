@@ -15,7 +15,6 @@
     
     	  <jsp:include page='_header.jsp'></jsp:include>
     	  <input type="hidden" name="id" value="${ form.iD }">
-          <div style="height: 113px;"></div>
 
           <div class="unit-5 overlay" style="background-image: url('images/hero_1.jpg');">
             <div class="container text-center">

@@ -6,7 +6,6 @@ import java.util.Date;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -19,15 +18,17 @@ import javax.servlet.http.HttpServletResponse;
 import qualk.beans.TeacherCV;
 import qualk.beans.User;
 import qualk.utils.DBUtils;
+import qualk.utils.MappingTable;
 import qualk.utils.MyUtils;
 
 @WebServlet(urlPatterns = {"/createAccount"})
 public class CreateAccountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	Boolean hasError = null;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		hasError = false;
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/jobfinder/createAccount.jsp");
 		dispatcher.forward(req, resp);
 	}
@@ -42,15 +43,6 @@ public class CreateAccountServlet extends HttpServlet {
 			String name = req.getParameter("userID");
 			String password = req.getParameter("password");
 			String comfirm_password = req.getParameter("confirm-password");
-			String locationID = req.getParameter("locationID");
-			String degree = req.getParameter("degree");
-			String experiences = req.getParameter("experiences");
-			String contact = req.getParameter("contact");
-			String skill = req.getParameter("skill");
-			Boolean available = Boolean.parseBoolean(req.getParameter("available"));
-			int salaryWant = Integer.parseInt(req.getParameter("salaryWant"));
-			SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-			Date birthday = formatter.parse(day);
 			
 			String errorString = null;
 			
@@ -68,8 +60,12 @@ public class CreateAccountServlet extends HttpServlet {
 				errorString = "Password unmatched!";
 			}
 			
-			req.setAttribute("errorString", errorString);
-			if (errorString == null) {
+			if (errorString != null) {
+				hasError = true;
+				req.setAttribute("hasError", hasError);
+				req.setAttribute("errorString", errorString);
+				this.doGet(req, resp);
+			} else {
 				User newUser = new User(name, password, email);
 				DBUtils.UC_ThemUser(conn, newUser);
 				List<User> newUserList = DBUtils.UC_TimkiemListUser(conn, name);
@@ -79,6 +75,16 @@ public class CreateAccountServlet extends HttpServlet {
 						id = u.getiD();
 					}
 				}
+				
+				String locationID = MappingTable.locationIDFromLocation(req, req.getParameter("locationID"));
+				String degree = req.getParameter("degree");
+				String experiences = req.getParameter("experiences");
+				String contact = req.getParameter("contact");
+				String skill = req.getParameter("skill");
+				Boolean available = Boolean.parseBoolean(req.getParameter("available"));
+				int salaryWant = Integer.parseInt(req.getParameter("salaryWant"));
+				SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+				Date birthday = formatter.parse(day);
 				
 				TeacherCV t = new TeacherCV(id, locationID, name, birthday, address, degree, experiences, contact, skill, available, salaryWant);
 				DBUtils.UC_ThemGiaoVien(conn, t);

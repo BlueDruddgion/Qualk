@@ -25,6 +25,9 @@ public class LoginFilter implements Filter {
     	super();
     }
 
+    public void init(FilterConfig fConfig) throws ServletException {
+	}
+    
 	public void destroy() {
 	}
 
@@ -35,8 +38,13 @@ public class LoginFilter implements Filter {
         
         HttpSession session = req.getSession();
         String servletPath = req.getServletPath();
+        String path = req.getRequestURI();
+        if (path.endsWith(".css")) {
+        	chain.doFilter(request, response);
+        	return;
+        }
         
-        if (servletPath.equals("/login")) {
+        if (servletPath.equals("/login") || servletPath.equals("/createAccount")) {
         	chain.doFilter(request, response);
         	return;
         }
@@ -51,8 +59,4 @@ public class LoginFilter implements Filter {
         
 		chain.doFilter(request, response);
 	}
-
-	public void init(FilterConfig fConfig) throws ServletException {
-	}
-
 }

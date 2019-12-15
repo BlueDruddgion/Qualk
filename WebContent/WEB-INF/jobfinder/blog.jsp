@@ -8,9 +8,8 @@
   <body>
   
   <div class="site-wrap">
-    <jsp:include page="_header.jsp"></jsp:include>
   
-    <div style="height: 113px;"></div>
+    <jsp:include page="_header.jsp"></jsp:include>
 
     <div class="unit-5 overlay" style="background-image: url('images/hero_1.jpg');">
       <div class="container text-center">

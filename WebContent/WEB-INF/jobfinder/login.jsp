@@ -5,7 +5,7 @@
   <head>
 	
     <jsp:include page="_head.jsp"></jsp:include>
-    <link rel="stylesheet" href="../../css/loginStyle.css">
+    <link rel="stylesheet" href="css/loginStyle.css">
     
   </head>
   <body>
@@ -13,7 +13,6 @@
   <div class="site-wrap">
 	
 	<jsp:include page="_header.jsp"></jsp:include>
-    <div style="height: 113px;"></div>
     
     <section class='login-form-section'> 
       <div class="container login-form-container"> 
@@ -36,7 +35,7 @@
           <div id='separator'></div>
           <div class='not-sign-in'>
               <a href='${ pageContext.request.contextPath }/login' class='option'>Forgot UserID or Password</a>
-              <div class='option'>Don't have a UserID?<span><a href='${ pageContext.request.contextPath }/login' class='option'> Create your now</a></span>
+              <div class='option'>Don't have a UserID?<span><a href='${ pageContext.request.contextPath }/createAccount' class='option'> Create your now</a></span>
           </div>
 
         </div>
