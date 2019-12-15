@@ -28,7 +28,6 @@ public class CompanyInfoServlet extends HttpServlet {
 			formList = DBUtils.UC_ListBTD(conn);
 			for (Form form : formList) {
 				form.setLocationID(MappingTable.locationFromID(req, form.getLocationID()));
-				System.out.println(form.getLocationID());
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
