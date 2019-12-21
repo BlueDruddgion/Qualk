@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +12,16 @@
   </head>
   <body>
   
+=======
+
+   <%@include file='header.jsp' %>
+  
+  
+ 
+  
+
+  <body>
+>>>>>>> teomoney
   <div class="site-wrap">
 
 	<jsp:include page="_header.jsp"></jsp:include>
@@ -119,7 +130,16 @@
 
         </div>
     </section>
+<<<<<<< HEAD
     <jsp:include page="_footer.jsp"></jsp:include>
+=======
+    
+
+    <%@include file='footer.jsp' %>
+
+
+
+>>>>>>> teomoney
   </div>
 
 

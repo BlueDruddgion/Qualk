@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +9,11 @@
   <body>
   
   <div class="site-wrap">
+=======
+
+<%@include file='header.jsp' %>
+
+>>>>>>> teomoney
   
    	<jsp:include page="_header.jsp"></jsp:include>
 
@@ -156,7 +162,14 @@
       </div>
     </div>
     
+<<<<<<< HEAD
     <jsp:include page="_footer.jsp"></jsp:include>
+=======
+
+    <%@include file='footer.jsp' %>
+
+    
+>>>>>>> teomoney
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>

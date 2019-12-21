@@ -8,18 +8,33 @@
     <link rel="stylesheet" href="css/loginStyle.css">
     
   </head>
-  <body>
   
+<<<<<<< HEAD
   <div class="site-wrap">
 	
 	<jsp:include page="_header.jsp"></jsp:include>
+=======
+    <div style="height: 113px;"></div>
+
+>>>>>>> teomoney
     
     <section class='login-form-section'> 
       <div class="container login-form-container"> 
         <div class="row login-form-row">
+<<<<<<< HEAD
           <h2 class='login-title'>Login to <a href='${ pageContext.request.contextPath }/home'>QUALK</a></h2>
           
           <form action='${ pageContext.request.contextPath }/login' method='POST'>
+=======
+          <h2 class='login-title'>Login to <a href='#'>QUALK</a></h2>
+          <form action='${pageContext.request.contextPath}/login' method='POST'>
+
+              <!-- <div class='input-form' id='user-first'>
+                  <input class='input'  type='text' placeholder='UserID' name='username'>
+                  <button type='submit' id='firstSubmit' class='submit-btn'><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                  
+                </div> -->
+>>>>>>> teomoney
             <div class='input-form' id='user' >
               <input class='input'  type='text' placeholder='UserID' name='username' value="${ user.userName }">
             </div>
@@ -45,7 +60,71 @@
 
     </section>
 
+<<<<<<< HEAD
 	<jsp:include page="_footer.jsp"></jsp:include>
+=======
+    <footer class="site-footer">
+      <div class="container">
+        
+
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-heading mb-4 text-white">About</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
+            <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="javascript:void(0)">About</a></li>
+                    <li><a href="javascript:void(0)">Services</a></li>
+                    <li><a href="javascript:void(0)">Approach</a></li>
+                    <li><a href="javascript:void(0)">Sustainability</a></li>
+                    <li><a href="javascript:void(0)">News</a></li>
+                    <li><a href="javascript:void(0)">Careers</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Categories</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="javascript:void(0)">Full Time</a></li>
+                    <li><a href="javascript:void(0)">Freelance</a></li>
+                    <li><a href="javascript:void(0)">Temporary</a></li>
+                    <li><a href="javascript:void(0)">Internship</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-md-2">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
+              <div class="col-md-12">
+                <p>
+                  <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+                  <a href="#" class="p-2"><span class="icon-twitter"></span></a>
+                  <a href="#" class="p-2"><span class="icon-instagram"></span></a>
+                  <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
+
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="icon-heart text-warning" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+>>>>>>> teomoney
 </div>
 
 

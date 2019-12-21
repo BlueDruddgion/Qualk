@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +9,13 @@
     
   </head>
   <body>
+=======
+
+   
+   <%@include file='header.jsp' %>
+
+
+>>>>>>> teomoney
   <div class="site-wrap">
     
     <jsp:include page="_header.jsp"></jsp:include>
@@ -216,10 +224,21 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
 	
 	<jsp:include page="_footer.jsp"></jsp:include>
 			
  </div>
+=======
+
+
+
+
+    <%@include file='footer.jsp' %>
+
+  
+        </div>
+>>>>>>> teomoney
       
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.1.min.js"></script>

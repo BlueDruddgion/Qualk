@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
    
+<<<<<<< HEAD
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +10,12 @@
 	<link rel="stylesheet" href="css/listJobStyle.css">
     
   </head>
+=======
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+
+<%@include file='header.jsp' %>
+
+>>>>>>> teomoney
   <body>
     <div class="site-wrap">
     
@@ -81,19 +88,39 @@
                                 <p class='company-intro'>Apax English là sự kết hợp của Công ty Cổ phần tập đoàn giáo dục EGROUP và Tập đoàn giáo dục Chungdahm Learning nổi tiếng có hơn 200 trung tâm đào tạo trên khắp thế giới</p>
                                 <h4 class='job-title'>Available Jobs</h4>
                                 <div class='available-jobs'>
+<<<<<<< HEAD
                                     <a href='javascript:void(0)'><div class='job'>Fulltime teacher</div></a>
                                     <a href='javascript:void(0)'><div class='job'>Teacher assistant</div></a>
                                     <a href='javascript:void(0)'><div class='job' id='last-job'>Partime teacher</div></a>
                                     <a href='${ pageContext.request.contextPath }/listOfForm'><div class='clicked'>Click here for more</div></a>
                                 </div>s                                
+=======
+                                   
+                                    <a href='#'><div class='job'>Fulltime teacher</div></a>
+                                   
+                                    <a href='#'><div class='job'>Teacher assistant</div></a>
+                                   
+                                    <a href='#'><div class='job' id='last-job'>Partime teacher</div></a>
+                                    <a href='#'><div class='clicked'>Click here for more</div></a>
+                                </div>                               
+>>>>>>> teomoney
                             </div>
+          
                         </div></a>
                     </div>
                 </div>
             </div>
            
         </section>
+<<<<<<< HEAD
        	<jsp:include page="_footer.jsp"></jsp:include>
+=======
+
+        <%@include file='footer.jsp' %>
+
+       
+
+>>>>>>> teomoney
     </div>
     
     

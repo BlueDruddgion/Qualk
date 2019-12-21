@@ -114,8 +114,13 @@ public class DBUtils {
 		ps.executeUpdate();
 	}
 	
+<<<<<<< HEAD
 	public static TeacherCV UC_TimKiemGiaoVien(Connection conn, String id) throws SQLException {
 		String query = "Select * from Teacher_Info where user_id = ?";
+=======
+	public static List<TeacherCV> UC_TimKiemGiaoVien(Connection conn, String name) throws SQLException {
+		String query = "Select * from Teacher_info where name = '?'";
+>>>>>>> teomoney
 		PreparedStatement ps = conn.prepareStatement(query);
 		ps.setString(1, id);
 		ResultSet rs = ps.executeQuery();
@@ -127,6 +132,10 @@ public class DBUtils {
 	}
 	
 	public static void UC_ThemTrungTam(Connection conn, CenterInfo center) throws SQLException {
+<<<<<<< HEAD
+=======
+
+>>>>>>> teomoney
 		String query = "Insert into Center_Info (User_ID, Name, Specialize, Address, Contact, Available, Location_ID) "
 				+ "values (?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement ps = conn.prepareStatement(query);

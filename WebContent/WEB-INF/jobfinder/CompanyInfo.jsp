@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<<<<<<< HEAD
    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -9,6 +10,11 @@
     <link rel="stylesheet" href="css/companyInfoStyle.css">
     
   </head>
+=======
+
+   <%@include file='header.jsp' %>
+
+>>>>>>> teomoney
   <body>
     <div class="site-wrap">
     
@@ -192,9 +198,20 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
     
     <jsp:include page="_footer.jsp"></jsp:include>
   </div>
+=======
+
+
+    <%@include file='footer.jsp' %>
+
+
+        
+  </body>
+
+>>>>>>> teomoney
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

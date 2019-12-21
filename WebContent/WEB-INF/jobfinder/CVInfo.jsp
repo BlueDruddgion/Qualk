@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +10,12 @@
     <link rel="stylesheet" href="css/CVInfoStyle.css">
     
   </head>
+=======
+
+   <%@include file='header.jsp' %>
+
+
+>>>>>>> teomoney
   <body>
   
   <div class="site-wrap">
@@ -139,9 +146,18 @@
 
         </div>
     </section>
+<<<<<<< HEAD
 	
 	<jsp:include page='_footer.jsp'></jsp:include>
 	    
+=======
+    
+
+    <%@include file='footer.jsp' %>
+
+    
+
+>>>>>>> teomoney
   </div>
 
 
